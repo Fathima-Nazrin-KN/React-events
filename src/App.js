@@ -1,23 +1,31 @@
-import logo from './logo.svg';
+
 import './App.css';
 
 function App() {
+  const name = [
+    "arun",
+  "madhav",
+  "john",
+  "abu"
+]
+
+const users =[
+  {name:"Arthur",age:23},
+  {name:"RAvi",age:19},
+  {name:"abu",age:undefined}
+]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+   <div >
+    {  users.map((user)=><>
+      <h1>{user.name}</h1>
+      {user.age >=18 &&
+      <h2>Adult</h2>}
+     
+
+      </>)}
+     
+     
+      
     </div>
   );
 }
